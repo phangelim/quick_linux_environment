@@ -1,3 +1,5 @@
+#!/bin/bash 
+
 set -e 
 
 logo_ascii='  /$$$$$$            /$$           /$$             /$$       /$$                                             
@@ -28,6 +30,15 @@ echo "$logo_ascii"
 echo "=>START THE PROCESS!!!"
 echo "=>If need to finish the process use CTRL+C"
 
+#check the system
+if [ -x "./check_system.sh" ]; then
+    echo "=>The System is Check / Continue..."
+    ./check_system.sh
+else
+    echo "=>Error: ./check_system.sh not found or not executable"
+    exit 1
+fi
+
 # Confirm that system have a YAY installed 
 if ! command -v yay &> /dev/null; then
     echo "=>Yay don't Installed yet => Installing YAY..."
@@ -51,5 +62,6 @@ if [ -x "./installation.sh" ]; then
     ./installation.sh
 else
     echo "=>Error: ./installation.sh not found or not executable"
+    exit 1 
 fi
 
