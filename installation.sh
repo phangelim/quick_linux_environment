@@ -2,4 +2,5 @@
 
 set -e 
 
-# Install the packages of 
+# Install the packages of desktop/
+
