@@ -1,6 +1,5 @@
-#!/bin/bash 
+#!/bin/bash
 
-set -e 
+set -e
 
 # Install the packages of desktop/
-

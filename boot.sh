@@ -1,6 +1,6 @@
-#!/bin/bash 
+#!/bin/bash
 
-set -e 
+set -e
 
 logo_ascii='  /$$$$$$            /$$           /$$             /$$       /$$                                             
  /$$__  $$          |__/          | $$            | $$      |__/                                             
@@ -25,43 +25,41 @@ logo_ascii='  /$$$$$$            /$$           /$$             /$$       /$$
                                                                                                              
                                                                                                              '
 
-
 echo "$logo_ascii"
 echo "=>START THE PROCESS!!!"
 echo "=>If need to finish the process use CTRL+C"
 
 #check the system
 if [ -x "./check_system.sh" ]; then
-    echo "=>The System is Check / Continue..."
-    ./check_system.sh
+  echo "=>The System is Check / Continue..."
+  ./check_system.sh
 else
-    echo "=>Error: ./check_system.sh not found or not executable"
-    exit 1
+  echo "=>Error: ./check_system.sh not found or not executable"
+  exit 1
 fi
 
-# Confirm that system have a YAY installed 
-if ! command -v yay &> /dev/null; then
-    echo "=>Yay don't Installed yet => Installing YAY..."
-    sudo pacman -S --needed --noconfirm git base-devel
-    git clone https://aur.archlinux.org/yay.git
-    cd yay 
-    makepkg -si
-    cd ..
-    rm -rf yay 
+# Confirm that system have a YAY installed
+if ! command -v yay &>/dev/null; then
+  echo "=>Yay don't Installed yet => Installing YAY..."
+  sudo pacman -S --needed --noconfirm git base-devel
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg -si
+  cd ..
+  rm -rf yay
 else
-    echo "=>Yay Already Installed!!!"
+  echo "=>Yay Already Installed!!!"
 fi
 
-# Update the all system 
+# Update the all system
 echo "=>Update the all system!!!"
 sudo pacman --noconfirm -Syu
 
 # run the ./installation
-if [ -x "./installation.sh" ]; then 
-    echo "=>Everything is ready / Starting the installation..."
-    ./installation.sh
+if [ -x "./installation.sh" ]; then
+  echo "=>Everything is ready / Starting the installation..."
+  ./installation.sh
 else
-    echo "=>Error: ./installation.sh not found or not executable"
-    exit 1 
+  echo "=>Error: ./installation.sh not found or not executable"
+  exit 1
 fi
-
