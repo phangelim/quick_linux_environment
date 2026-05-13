@@ -27,3 +27,5 @@ for packages in desktop/*.sh; do
     exit 1
   fi
 done
+
+echo "=>Desktop apps Installed!!!"
