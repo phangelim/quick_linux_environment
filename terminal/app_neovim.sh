@@ -1,0 +1,5 @@
+yay -S --needed --noconfirm neovim
+
+# lazyvim install
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
