@@ -3,7 +3,7 @@
 set -e
 
 #install zsh and the powerlevel10k
-yay -S --needed --noconfirm zsh ttf-meslo-nerd-font-powerlevel10k
+yay -S --needed --noconfirm zsh ttf-meslo-nerd-font-powerlevel10k zsh-theme-powerlevel10k
 
 #copy my config
 echo "=>Copy zsh dotfiles"
