@@ -5,14 +5,26 @@ fi
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 
-#Load Powerlevel10k  
+# load Powerlevel10k  
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-#Command history  
+# command history  
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 setopt sharehistory
+
+if command -v eza &> /dev/null; then
+    alias ls="eza --icons=always --group-directories-first"
+    alias ll="eza -lah --icons=always --group-directories-first"
+    alias la="eza -a --icons=always --group-directories-first"
+    alias lt="eza --tree --icons=always" # Beautiful tree view replacement
+else
+    
+    alias ls="ls --color=auto"
+    alias ll="ls -lah --color=auto"
+    alias ..="cd .."
+fi
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
