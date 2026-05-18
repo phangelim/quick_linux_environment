@@ -29,3 +29,6 @@ for packages in desktop/*.sh; do
 done
 
 echo "=>Desktop apps Installed!!!"
+
+echo "=>Reboot the system"
+reboot
