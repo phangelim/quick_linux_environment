@@ -17,6 +17,7 @@ done
 echo "=>Terminal softwares Installed!!!"
 
 # install the packages of desktop/
+shopt -s nullglob
 for packages in desktop/*.sh; do
   if [ -x "$packages" ]; then
     echo "Installing ${packages}"
@@ -30,5 +31,10 @@ done
 
 echo "=>Desktop apps Installed!!!"
 
-echo "=>Reboot the system"
-reboot
+read -rp "=>Do you want a reboot the system? [s/N]: " answer
+if [[ "$answer" =~ ^[Ss]$ ]]; then
+   reboot
+else
+    echo "Reboot later"
+fi 
+
