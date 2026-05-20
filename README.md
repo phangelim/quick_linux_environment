@@ -22,6 +22,6 @@ cd quick_linux_environmet
 
 ## 3. Run the boot.sh
 ```
-chmod +x boot.sh && ./boot.sh
+chmod +x boot.sh desktop/*.sh terminal/*.sh && ./boot.sh
 ```
 
