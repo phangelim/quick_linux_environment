@@ -1,1 +1,2 @@
-yay -S --needed --noconfirm zed-editor
+#zed official installation
+curl -f https://zed.dev/install.sh | sh
