@@ -31,10 +31,9 @@ done
 
 echo "=>Desktop apps Installed!!!"
 
-read -rp "=>Do you want a reboot the system? [s/N]: " answer
-if [[ "$answer" =~ ^[Ss]$ ]]; then
-   reboot
+read -rp "=>Do you want a reboot the system? [y/N]: " answer
+if [[ "$answer" =~ ^[Yy]$ ]]; then
+  reboot
 else
-    echo "Reboot later"
-fi 
-
+  echo "Reboot later"
+fi
