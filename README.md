@@ -26,6 +26,7 @@ quick_linux_environment/
 |   ├──app_brave.sh
 |   ├──app_calculator-gnome.sh
 |   ├──app_chromium.sh
+    ├──app_discord.sh
 |   ├──app_libreoffice.sh
 |   ├──app_rofi.sh
 |   ├──app_spotify.sh
