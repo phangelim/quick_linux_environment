@@ -19,7 +19,7 @@ if command -v eza &> /dev/null; then
     alias ls="eza --icons=always --group-directories-first"
     alias ll="eza -lah --icons=always --group-directories-first"
     alias la="eza -a --icons=always --group-directories-first"
-    alias lt="eza --tree --icons=always" # Beautiful tree view replacement
+    alias lt="eza --tree --icons=always" 
 else
     
     alias ls="ls --color=auto"
