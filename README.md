@@ -19,7 +19,8 @@ quick_linux_environment/
 |       └──config.ini
 |    ├──zsh
 |       └──.zshrc
-|    ├──quick_linux_img1
+|    ├──quick_linux_img1.png
+     ├──quick_linux_img2.png
 |    ├──wallpaper.jpg
 ├──desktop/
 |   ├──app_brave.sh
