@@ -34,6 +34,7 @@ quick_linux_environment/
 |   └──app_zed.sh
 ├──terminal/
 |   ├──app_alacritty.sh
+    ├──app_docker.sh
 |   ├──app_eza.sh
 |   ├──app_i3.sh
 |   ├──app_lazydocker.sh
